@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
     <canvas class="matrix-bg" id="matrixCanvas"></canvas>
-    
-    <!-- ヘッダー -->
+
     <header class="header">
         <div class="header-container">
             <h1 class="logo">HEROWL</h1>
@@ -26,11 +26,11 @@
     </header>
 
     <main class="main-content">
+
         <!-- プロフィールセクション -->
         <section id="profile" class="section profile-section">
             <div class="container">
                 <div class="profile-grid">
-                    <!-- 左側：基本情報 -->
                     <div class="profile-card">
                         <div class="profile-image-wrapper">
                             <div class="profile-image">
@@ -39,33 +39,22 @@
                         </div>
                         <h2 class="profile-name">砥川展明</h2>
                         <p class="profile-title">Game Developer</p>
-                        
                         <div class="profile-info">
                             <div class="info-item">
                                 <span class="info-label">バンタンゲームアカデミー福岡校</span>
                                 <span class="info-value">ゲームプログラマー専攻高等部 3年次</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">Email</span>
-                                <span class="info-value">hiroakitogawa74@gmail.com</span>
-                            </div>
-                            <div class="info-item">
                                 <span class="info-label">電話</span>
                                 <span class="info-value">080-4317-7782</span>
                             </div>
                         </div>
-
                         <div class="social-links">
-                            <a href="https://github.com/HEROWL74" class="social-btn" target="_blank">
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://x.com/HRAKProgrammer" class="social-btn" target="_blank">
-                                <span>X</span>
-                            </a>
+                            <a href="https://github.com/HEROWL74" class="social-btn" target="_blank"><span>GitHub</span></a>
+                            <a href="https://x.com/HRAKProgrammer" class="social-btn" target="_blank"><span>X</span></a>
                         </div>
                     </div>
 
-                    <!-- 右側：自己PR・学歴 -->
                     <div class="profile-details">
                         <div class="detail-section">
                             <h3 class="section-title">About Me</h3>
@@ -74,16 +63,13 @@
                                 その中で、C++,DirectX12を用いた自作ゲームエンジン（OrionEngine）の制作も行っております。
                             </p>
                         </div>
-
                         <div class="detail-section">
                             <h3 class="section-title">自己PR</h3>
                             <ul class="pr-list">
                                 <li><strong>強み：</strong> 私の強みは、探求心です。単にゲーム開発だけでなく、どう設計したら、classの管理がしやすくなるか、など、設計においても探求しています。</li>
-                                <li><strong>貢献：</strong> </li>
-                                <li><strong>目標：</strong> </li>
+                                <li><strong>目標：</strong> 私の目標は、ゲームエンジン->ゲーム開発->ゲームリリースの一連の分かるゲームエンジニアとなり、現場を支えたいです。</li>
                             </ul>
                         </div>
-
                         <div class="detail-section">
                             <h3 class="section-title">学歴・職歴</h3>
                             <ul class="history-list">
@@ -91,7 +77,6 @@
                                     <span class="history-year">2026年 - 現在</span>
                                     <span class="history-content">S高等学校 バンタンゲームアカデミー福岡校 在学中</span>
                                 </li>
-                                <!-- 必要に応じて追加 -->
                             </ul>
                         </div>
                     </div>
@@ -112,25 +97,19 @@
                                     <span class="skill-name">C++</span>
                                     <span class="skill-level">★★★★☆</span>
                                 </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-level="80"></div>
-                                </div>
+                                <div class="skill-bar"><div class="skill-progress" data-level="80"></div></div>
                                 <p class="skill-desc">オブジェクト指向プログラミング、メモリ管理</p>
                             </div>
-                            
                             <div class="skill-item">
                                 <div class="skill-header">
                                     <span class="skill-name">C#</span>
                                     <span class="skill-level">★★★☆☆</span>
                                 </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-level="50"></div>
-                                </div>
+                                <div class="skill-bar"><div class="skill-progress" data-level="50"></div></div>
                                 <p class="skill-desc">Unity開発、ゲームロジック実装</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="skill-category">
                         <h3 class="category-title">ゲームエンジン・ツール</h3>
                         <div class="skill-items">
@@ -139,25 +118,19 @@
                                     <span class="skill-name">Unity</span>
                                     <span class="skill-level">★★★☆☆</span>
                                 </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-level="50"></div>
-                                </div>
+                                <div class="skill-bar"><div class="skill-progress" data-level="50"></div></div>
                                 <p class="skill-desc">2D/3Dゲーム開発、UI実装、物理演算</p>
                             </div>
-                            
                             <div class="skill-item">
                                 <div class="skill-header">
                                     <span class="skill-name">DirectX12</span>
                                     <span class="skill-level">★★★☆☆</span>
                                 </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-level="60"></div>
-                                </div>
+                                <div class="skill-bar"><div class="skill-progress" data-level="60"></div></div>
                                 <p class="skill-desc">グラフィックスAPI、レンダリングパイプライン</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="skill-category">
                         <h3 class="category-title">その他</h3>
                         <div class="skill-items">
@@ -166,9 +139,7 @@
                                     <span class="skill-name">Git</span>
                                     <span class="skill-level">★★★★☆</span>
                                 </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-level="80"></div>
-                                </div>
+                                <div class="skill-bar"><div class="skill-progress" data-level="80"></div></div>
                                 <p class="skill-desc">バージョン管理、チーム開発</p>
                             </div>
                         </div>
@@ -180,204 +151,71 @@
         <!-- 制作実績セクション -->
         <section id="works" class="section works-section">
             <div class="container">
-                <h2 class="main-title">Works</h2>
-                
-                <!-- Deepest Dungeon -->
+                <h2 class="main-title">WORKS</h2>
+
+                <!-- Alien's Days -->
                 <article class="work-item">
-                    <div class="work-media">
-                        <video class="work-video" controls poster="">
-                            <source src="deepestdungeon.mp4" type="video/mp4">
-                        </video>
+                    <div class="work-doc">
+                        <img src="AliensDays.png" alt="Alien's Days 詳細" class="doc-image">
                     </div>
                     <div class="work-info">
-                        <h3 class="work-title">Deepest Dungeon</h3>
+                        <h3 class="work-title">Alien's Days</h3>
                         <div class="work-meta">
-                            <span class="meta-item"><strong>製作期間：</strong>[期間を記入]</span>
-                            <span class="meta-item"><strong>ジャンル：</strong>ローグライク</span>
-                            <span class="meta-item"><strong>プラットフォーム：</strong>Web</span>
+                            <span class="meta-item"><strong>製作期間:</strong> 5か月（修正含め）</span>
+                            <span class="meta-item"><strong>ジャンル:</strong> 2D横スクロールアクション</span>
+                            <span class="meta-item"><strong>プラットフォーム:</strong> Windows</span>
                         </div>
-                        
-                        <p class="work-description">
-                            ダンジョンの最深部を目指すローグライクゲーム。戦略と運が試される冒険が待っています。
-                        </p>
-                        
-                        <div class="work-details">
-                            <div class="detail-block">
-                                <h4>担当範囲</h4>
-                                <p>個人制作 ゲームロジック全般担当</p>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>使用技術</h4>
-                                <div class="tech-tags">
-                                    <span class="tag">Unity</span>
-                                    <span class="tag">C#</span>
-                                </div>
-                            </div>
+                        <div class="tech-tags">
+                            <span class="tag">Siv3D</span>
+                            <span class="tag">C++</span>
                         </div>
-                        
-                        <a href="https://unityroom.com/games/deepestdungeon" class="work-link" target="_blank">
-                            プレイする →
-                        </a>
+                        <a href="https://github.com/HEROWL74/AliensDays" class="work-link" target="_blank">詳細を見る →</a>
                     </div>
                 </article>
 
                 <!-- Double Cast -->
                 <article class="work-item">
-                    <div class="work-media">
-                        <img src="doublecast-image.png" alt="Double Cast" class="work-image">
+                    <div class="work-doc">
+                        <img src="DoubleCast.png" alt="Double Cast 詳細" class="doc-image">
                     </div>
                     <div class="work-info">
                         <h3 class="work-title">Double Cast</h3>
                         <div class="work-meta">
-                            <span class="meta-item"><strong>製作期間：</strong>[期間を記入]</span>
-                            <span class="meta-item"><strong>ジャンル：</strong>[ジャンルを記入]</span>
-                            <span class="meta-item"><strong>プラットフォーム：</strong>Web</span>
+                            <span class="meta-item"><strong>製作期間：</strong>3ヶ月</span>
+                            <span class="meta-item"><strong>ジャンル：</strong>2Dアクション</span>
+                            <span class="meta-item"><strong>プラットフォーム：</strong>Web (Unity Room)</span>
                         </div>
-                        
-                        <p class="work-description">
-                            3人のチームで作り上げた二人一役がテーマのゲーム。二人一脚の新世界へ!
-                        </p>
-                        
-                        <div class="work-details">
-                            <div class="detail-block">
-                                <h4>担当範囲</h4>
-                                <p>
-                                    砥川: ゲームロジック全般担当
-                                    石井, 村口: グラフィック担当
-                                </p>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>使用技術</h4>
-                                <div class="tech-tags">
-                                    <span class="tag">Unity</span>
-                                    <span class="tag">C#</span>
-                                </div>
-                            </div>
+                        <div class="tech-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
                         </div>
-                        
-                        <a href="https://unityroom.com/games/doublecast" class="work-link" target="_blank">
-                            プレイする →
-                        </a>
+                        <a href="https://unityroom.com/games/doublecast" class="work-link" target="_blank">詳細を見る →</a>
                     </div>
                 </article>
 
-                <!-- Alien's Days -->
+                <!-- OrionEngine -->
                 <article class="work-item">
-                    <div class="work-media">
-                        <div class="work-placeholder">Alien's Days</div>
-                        <!-- 画像用: <img src="aliensdays-image.png" alt="Alien's Days" class="work-image"> -->
+                    <div class="work-doc">
+                        <img src="OrionEngine.png" alt="OrionEngine 詳細" class="doc-image">
                     </div>
                     <div class="work-info">
-                        <h3 class="work-title">Alien's Days</h3>
+                        <h3 class="work-title">OrionHub & OrionEngine</h3>
                         <div class="work-meta">
-                            <span class="meta-item"><strong>製作期間：</strong>8か月（修正含め）</span>
-                            <span class="meta-item"><strong>ジャンル：</strong>2D横スクロール</span>
-                            <span class="meta-item"><strong>プラットフォーム：</strong>Windows</span>
+                            <span class="meta-item"><strong>開発期間:</strong> 継続開発中</span>
+                            <span class="meta-item"><strong>種類:</strong> ゲームエンジン</span>
+                            <span class="meta-item"><strong>プラットフォーム:</strong> Windows</span>
                         </div>
-                        
-                        <p class="work-description">
-                            [ゲームの説明を記入]
-                        </p>
-                        
-                        <div class="work-details">
-                            <div class="detail-block">
-                                <h4>担当範囲</h4>
-                                <p>ゲームロジック全般担当</p>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>使用技術</h4>
-                                <div class="tech-tags">
-                                    <span class="tag">Siv3D</span>
-                                    <span class="tag">C++</span>
-                                </div>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>制作時の課題と工夫</h4>
-                                <p>[どんな課題があって、どう解決したかを記入]</p>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>成果</h4>
-                                <p>ゲームクリエイター甲子園 U-18 総合大賞ノミネート</p>
-                                <p>Bit Summit 出展</p>
-                                <p>九州学生ゲーム大祭 出展</p>
-                                <p>CEDEC+KYUSHU 出展</p>
-                            </div>
+                        <div class="tech-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">DirectX12</span>
+                            <span class="tag">HLSL</span>
+                            <span class="tag">Lua</span>
+                            <span class="tag">electron</span>
                         </div>
-                        
-                        <!-- URL用 -->
-                        <!-- <a href="[URL]" class="work-link" target="_blank">プレイする →</a> -->
-                    </div>
-                </article>
-
-                <!-- GinRun -->
-                <article class="work-item">
-                    <div class="work-media">
-                        <div class="work-placeholder">GinRun</div>
-                    </div>
-                    <div class="work-info">
-                        <h3 class="work-title">GinRun</h3>
-                        <div class="work-meta">
-                            <span class="meta-item"><strong>製作期間：</strong>1年次 3か月</span>
-                            <span class="meta-item"><strong>ジャンル：</strong>アクション</span>
-                            <span class="meta-item"><strong>プラットフォーム：</strong> Windows</span>
-                        </div>
-                        
-                        <p class="work-description">
-                            10秒走をオマージュした最初に作ったゲーム。スピードと精密さが要求されます。
-                        </p>
-                        
-                        <div class="work-details">
-                            <div class="detail-block">
-                                <h4>担当範囲</h4>
-                                <p>ゲームロジックすべて担当</p>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>使用技術</h4>
-                                <div class="tech-tags">
-                                    <span class="tag">Dxライブラリ</span>
-                                     <span class="tag">C++, Dxライブラリ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Season Adventure -->
-                <article class="work-item">
-                    <div class="work-media">
-                        <div class="work-placeholder">Season Adventure</div>
-                    </div>
-                    <div class="work-info">
-                        <h3 class="work-title">Season Adventure</h3>
-                        <div class="work-meta">
-                            <span class="meta-item"><strong>製作期間：</strong>1年次 三か月</span>
-                            <span class="meta-item"><strong>ジャンル：</strong>RPG</span>
-                            <span class="meta-item"><strong>プラットフォーム：</strong>Windows</span>
-                        </div>
-                        
-                        <p class="work-description">
-                            四季を冒険というテーマを基に作ったRPGゲーム。季節の変化とともに味が変化するゲーム。
-                        </p>
-                        
-                        <div class="work-details">
-                            <div class="detail-block">
-                                <h4>担当範囲</h4>
-                                <p>ゲームロジック全般担当</p>
-                            </div>
-                            
-                            <div class="detail-block">
-                                <h4>使用技術</h4>
-                                <div class="tech-tags">
-                                    <span class="tag">Dxライブラリ</span>
-                                     <span class="tag">C++, Dxライブラリ</span>
-                                </div>
-                            </div>
+                        <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:0.5rem;">
+                            <a href="https://github.com/HEROWL74/OrionEngine" class="work-link" target="_blank">GitHub (Engine) →</a>
+                            <a href="https://github.com/HEROWL74/OrionHub" class="work-link" target="_blank">GitHub (OrionHub) →</a>
+                            <a href="https://github.com/HEROWL74/OrionEngine/releases/tag/GameVol.1" class="work-link" target="_blank">🎮 ミニゲームDL →</a>
                         </div>
                     </div>
                 </article>
@@ -391,10 +229,6 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="contact-item">
-                            <span class="contact-label">Gmail</span>
-                            <a>hiroakitogawa74@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
                             <span class="contact-label">GitHub</span>
                             <a href="https://github.com/HEROWL74" class="contact-value" target="_blank">github.com/HEROWL74</a>
                         </div>
@@ -402,10 +236,11 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 HEROWL. All Rights Reserved.</p>
+        <p>© 2025 HEROWL / 砥川展明. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>

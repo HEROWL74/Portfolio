@@ -376,10 +376,9 @@ body {
 }
 
 .work-item {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 15px;
@@ -392,47 +391,44 @@ body {
     box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
 }
 
-.work-media {
+/* 詳細PNG - 全幅大表示 */
+.work-doc {
     width: 100%;
-    height: 350px;
-    background: var(--bg-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    background: #fff;
+    border-bottom: 2px solid var(--border-color);
+    line-height: 0;
 }
 
-.work-video,
-.work-image {
+.doc-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
-.work-placeholder {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--text-secondary);
-}
-
+/* 情報エリア - 下段横並び */
 .work-info {
-    padding: 2rem;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .work-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 900;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .work-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    width: 100%;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
@@ -466,6 +462,29 @@ body {
     font-size: 0.95rem;
     color: var(--text-secondary);
     line-height: 1.8;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.detail-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .tech-tags {
@@ -657,4 +676,48 @@ body {
 
 .fade-in {
     animation: fadeIn 0.6s ease-out;
+}
+/* ===== PDF機能 ===== */
+.media-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.media-container .work-video,
+.media-container .work-image {
+    flex: 1;
+    min-height: 200px;
+    max-height: 350px;
+    object-fit: contain;
+    width: 100%;
+    background: var(--bg-dark);
+}
+
+.media-container .work-placeholder {
+    flex: 1;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-secondary);
+    background: var(--bg-dark);
+}
+
+.doc-section {
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    background: #fff;
+}
+
+.doc-image {
+    width: 100%;
+    display: block;
+    object-fit: contain;
 }

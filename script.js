@@ -78,6 +78,27 @@ function initSkillBars() {
     });
 }
 
+// スクロールアニメーション（フェードイン）
+function initScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // アニメーション対象の要素を設定
+    document.querySelectorAll('.work-item, .skill-category, .detail-section').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(element);
+    });
+}
+
 // ヘッダースクロール効果
 function initHeaderScroll() {
     const header = document.querySelector('.header');
